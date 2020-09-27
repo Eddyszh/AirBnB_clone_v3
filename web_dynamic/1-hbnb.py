@@ -10,7 +10,7 @@ app = Flask(__name__)
 app.url_map.strict_slashes = False
 
 
-@app.route('/0-hbnb/', strict_slashes=False)
+@app.route('/1-hbnb/', strict_slashes=False)
 def filters():
     """Display a HTML page"""
     classes = {'State': State, 'Amenity': Amenity, 'Place': Place}
@@ -30,3 +30,4 @@ def teardown_db(exception):
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+

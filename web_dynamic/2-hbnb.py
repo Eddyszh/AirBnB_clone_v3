@@ -10,7 +10,7 @@ app = Flask(__name__)
 app.url_map.strict_slashes = False
 
 
-@app.route('/1-hbnb/', strict_slashes=False)
+@app.route('/2-hbnb/', strict_slashes=False)
 def filters():
     """Display a HTML page"""
     classes = {'State': State, 'Amenity': Amenity, 'Place': Place}
@@ -18,7 +18,7 @@ def filters():
     amenities = storage.all(classes['Amenity']).values()
     places = storage.all(classes['Place']).values()
     cache_id = uuid.uuid4()
-    return render_template('1-hbnb.html', states=states,
+    return render_template('2-hbnb.html', states=states,
                            amenities=amenities, places=places,
                            cache_id=cache_id)
 

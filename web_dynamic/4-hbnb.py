@@ -10,7 +10,7 @@ app = Flask(__name__)
 app.url_map.strict_slashes = False
 
 
-@app.route('/3-hbnb/', strict_slashes=False)
+@app.route('/4-hbnb/', strict_slashes=False)
 def filters():
     """Display a HTML page"""
     classes = {'State': State, 'Amenity': Amenity, 'Place': Place}

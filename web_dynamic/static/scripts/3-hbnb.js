@@ -25,9 +25,8 @@ window.onload = function () {
     contentType: 'application/json',
     dataType: 'json',
     data: '{}',
-    success: function (data, status, jq) {
-      for (let i = 0; i < data.length; i++) {
-        const place = data[i];
+    success: function (data) {
+      for (const place of data) {
         $('.places').append('<article><div class="title"><h2>'
                           + place.name
                           + '</h2><div class="price_by_night">$'
